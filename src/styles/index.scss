@@ -1,18 +1,27 @@
 @import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100');
 
 .card-body{
     width: 800px;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 h1{
     text-align: center;
     margin-bottom: 20px;
+    color: #ebdadb;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 100px;
 }
 .card-header{
     padding-left: 2.0rem;
+    font-size: 36px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .list-group-item{
     padding-left: 2.0rem;
+    color: #6e6e6e;
+    font-size: 36px;
+    font-family: 'Work Sans', sans-serif;
 }
