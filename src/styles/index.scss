@@ -13,15 +13,44 @@ h1{
     font-family: 'Work Sans', sans-serif;
     font-size: 100px;
 }
-.card-header{
-    padding-left: 2.0rem;
-    font-size: 36px;
-    font-family: 'Work Sans', sans-serif;
-}
 
 .list-group-item{
     padding-left: 2.0rem;
     color: #6e6e6e;
-    font-size: 36px;
+    font-size: 32px;
     font-family: 'Work Sans', sans-serif;
+    list-style-type: none;
 }
+
+.input-task{
+    padding-left: 2.0rem;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;  
+}
+
+.li-item{
+    list-style-type: none;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;  
+    border: solid 0.01em #d3d3d3;
+    padding-left: 30px;
+
+}
+
+span{
+    padding-right: 10px;
+    font-size: 32px;
+    color: #d3d3d3;
+    font-family: 'Work Sans', sans-serif;  
+    float: right;
+    padding-right: 10px;
+}
+
+
+// .card-header{
+//     padding-left: 2.0rem;
+//     font-size: 36px;
+//     font-family: 'Work Sans', sans-serif;
+// }
