@@ -8,16 +8,19 @@ export class Home extends React.Component{
     constructor(){
         super();
         this.state={
-            tasks:[]
+            tasks:[],
+            countTasks: 0
         };
     }
     
     handleClickNewTask(e){
         if (e.charCode == 13){
             let newTasks = this.state.tasks.slice(0);
+            let countTasks = this.state.tasks.length + 1;
             newTasks.push(e.target.value);
             this.setState({
-                tasks: newTasks
+                tasks: newTasks,
+                totalTasks: countTasks
             });
             e.target.value="";
         }
@@ -25,9 +28,12 @@ export class Home extends React.Component{
     
     deleteTask(a) {
         let tempState = this.state.tasks.filter((t,i) => (i !== a));
+        let tempCountTasks = this.state.tasks.length - 1;
         this.setState({
-            tasks: tempState
+            tasks: tempState,
+            totalTasks: tempCountTasks
         });
+        // console.log(tempCountTasks);
     }
     
     render(){
@@ -37,7 +43,6 @@ export class Home extends React.Component{
                 {element} 
                 <span onClick={(event) => this.deleteTask(index)}>x</span>
             </li>;
-            
         });
         
         return (
@@ -45,7 +50,7 @@ export class Home extends React.Component{
             <div className="card-body mx-auto">
                 <h1>todos</h1>
                 <div className="card">
-                    <ul className="list-group list-group-flush" id="ul-list">
+                    <ul className="list-group list-group-flush" id="ulList">
                         <input
                         placeholder="What needs to be done?"
                         className="input-task"
@@ -53,9 +58,9 @@ export class Home extends React.Component{
                         onKeyPress={(event) => this.handleClickNewTask(event)}/>
                         {listTasks}
                     </ul>
+                    <span className="count-list">{this.state.totalTasks} item left</span>   
                 </div>
             </div>
         );
     }
 }
-                    // <span id="removeX" onClick={this.deleteTask.bind(this)}> X </span>
